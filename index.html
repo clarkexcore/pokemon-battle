@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pokemon Card thing For you Forever</title>
+	<link rel="stylesheet" href="styles/styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Audiowide|Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+</head>
+<body>
+	<header>
+		<h1>Pokemon Battle</h1>
+		<div class="whiteLine"></div>
+		<h2>A Trading Card Experience</h2>
+	</header>
+
+	<div class="battleBody">
+		<section class="introForm animated fadeInUp">
+			<div class="wrapper">
+			<div class="instructions">
+				<p>It's time to duke it out 3rd Grade style! Winner is determined by the HP of the pokemon. Let's play!</p>
+			</div>
+				<form action="" class="choosePokemon">
+					<input type="text" class="pokemon" placeholder="Choose Your Pokemon!">
+					<p>Or pick a random Pokemon!</p>
+					<input type="submit" value="Random Pokemon">
+				</form>
+			</div>
+		</section>
+
+		<main>
+			<div class="wrapper">
+				<section class="battleArea hidden">
+					<div class="userPokemon"></div>
+					<div class="computerPokemon"></div>
+					<div class="outcome hidden">
+						<h3></h3>
+						<div class="totals">
+							<div class="user"><h4>You</h4><p></p></div>
+							<div class="computer"><h4>Computer</h4><p></p></div>
+						</div>
+						<button class="newOpponent">Face Another Opponent!</button>
+						<button class="newPokemon">Pick a new Pokemon!</button>
+						<button class="reset">Reset!</button>
+						<a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-text="I just played Pokemon Battle!" data-via="clarkexcore" data-hashtags="pokemonbattle" data-show-count="false">Tweet</a>
+					</div>
+				</section>
+			</div>
+		</main>
+	</div>
+	
+	<footer>
+		<p class="nintendo">All Characters and Images are owned by Pokemon/Nintendo &copy;</p>
+		<p>Alex Clarke - 2017</p>
+	</footer>
+	
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	<script src="js/app.js"></script>		
+</body>
+</html>

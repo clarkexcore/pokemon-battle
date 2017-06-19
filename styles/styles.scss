@@ -1,0 +1,289 @@
+@import 'partials/setup';
+@import 'partials/variables';
+
+img{
+	max-width: 100%;
+}
+
+body{
+	background-image: url(../images/thing.jpg);
+	background-position: center;
+	background-size: cover;
+	color: white;
+}
+
+header{
+	margin-top: 15px;
+}
+
+h1{
+	margin: 0;
+	text-align: center;
+	font-family: $titles;
+	font-size: 75px;
+	text-transform: uppercase;
+}
+
+h2{
+	margin: 0;
+	margin: 15px 0;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: $titles;
+	font-size: 30px;
+	letter-spacing: 5px;
+}
+
+h3{
+	font-family: $titles;
+	letter-spacing: 2px;
+
+}
+
+h4{
+	margin: 0;
+	margin-bottom: 10px;
+}
+
+p{
+	margin: 0;
+	font-family: $regular;
+}
+
+.wrapper{
+	width: 66.6%;
+	margin: 0 auto;
+}
+
+.whiteLine{
+	margin: 0 auto;
+	width: 80%;
+	height: 4px;
+	background-color: white;
+}
+
+.battleBody{
+	height: 100vh;
+}
+
+//END OF GENERAL STYLING AREA.
+
+.instructions p{
+	font-size: 18px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.introForm{
+	padding: 75px 0;
+	height: 80vh;
+}
+
+.choosePokemon{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	.pokemon{
+		width: 350px;
+		margin-bottom: 25px;
+		padding: 10px 0;
+		text-align: center;
+		font-family: $regular;
+		font-size: 18px;
+		background-color: rgba(0, 0, 0, 0);
+		border: none;
+		border-bottom: 2px solid white;
+		color: white;
+		outline: rgba(0,0,0,0);
+		&::placeholder{
+			color: white;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+		}
+	}
+	p{
+		font-size: 18px;
+		margin-bottom: 20px;
+	}
+}
+
+input[type=submit]{
+	padding: 10px 15px;
+	border-radius: 10px;
+	border: 3px solid white;
+	font-family: $regular;
+	background-color: rgba(0,0,0,0.6);
+	transition: all 1s;
+	color: white;
+	&:hover{
+		background-color: #edd131;
+	}
+}
+
+//END OF SELECTION STYLING.
+
+.battleArea{
+	display: flex;
+	position: relative;
+	padding: 50px 0;
+	.userPokemon{
+		margin-right: 25px;
+		width: calc(50% - 25px);
+		display: flex;
+		align-items: center;
+	}
+	.computerPokemon{
+		margin-left: 25px;
+		width: calc(50% - 25px);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+//END OF BATTLE AREA STYLING
+
+.outcome{
+	position: absolute;
+	padding: 25px 50px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(0, 0, 0, 0.66);
+	h3{
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+	}
+	button{
+		margin-bottom: 15px;
+		background-color: rgba(0,0,0,0);
+		border: 2px solid white;
+		border-radius: 5px;
+		color: white;
+		padding: 5px 10px;
+		transition: all 1s;
+		outline: rgba(0,0,0,0);
+		&:hover{
+			background-color: #edd131;
+		}
+	}
+	
+}
+
+.outcomeBox{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.totals{
+	display: flex;
+	margin-bottom: 20px;
+	.user{
+		margin-right: 50px;
+		flex-basis: 50%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.computer{
+		flex-basis: 50%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+//END OF OUTCOME STYLING
+
+
+footer{
+	max-width: 100%;
+	display: flex;
+	justify-content: space-between;
+	background-color: rgba(0, 0, 0, 0.8);
+	padding: 15px 15px;
+	text-transform: uppercase;
+	font-size: 12px;
+	margin-top: 10px;	
+}
+
+//END OF FOOTER STYLING
+
+.hidden{
+	display: none;
+}
+
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+	.wrapper{
+		width: 90%;
+	}
+	.battleArea{
+		width: 100%;
+	}
+	body{
+		background-repeat: repeat;
+		position: relative;
+		height: 100%;
+	}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+	.battleArea{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		.userPokemon{
+			margin-right: 0px;
+			margin-bottom: 50px;
+			width: 75%;
+			display: flex;
+			align-items: center;
+		}
+		.computerPokemon{
+			margin-left: 0;
+			width: 75%;
+			margin-bottom: 50px;
+		}
+	}
+	h1{
+		font-size: 50px;
+	}
+	footer{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		.nintendo{
+			margin-bottom: 10px;
+		}
+	}
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	.choosePokemon{
+		.pokemon{
+			width: 90%;
+		}
+	}
+	.battleArea{
+		.userPokemon{
+			width: 100%;
+		}
+		.computerPokemon{
+			width: 100%;
+		}
+	}
+}
+
+
+
