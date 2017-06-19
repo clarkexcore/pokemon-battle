@@ -188,7 +188,9 @@ p {
 .instructions p {
   font-size: 18px;
   text-align: center;
-  margin-bottom: 20px; }
+  margin-bottom: 50px; }
+  .instructions p span {
+    display: block; }
 
 .introForm {
   padding: 75px 0;
@@ -294,7 +296,7 @@ input[type=submit] {
     border: 2px solid white;
     border-radius: 5px;
     color: white;
-    padding: 5px 10px;
+    padding: 10px 25px;
     transition: all 1s;
     outline: transparent; }
     .outcome button:hover {
